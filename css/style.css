@@ -1,0 +1,183 @@
+/* Start header CSS */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.header .navbar-nav {
+    border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.header .nav-item {
+    position: relative;
+}
+
+.header .nav-item::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    display: inline-block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.header .nav-item:hover::after, .header .nav-item.active::after {
+    width: 100%;
+}
+
+.header_info {
+    transform: translateY(10px);
+    font-size: 12px;
+}
+/* End header CSS */
+
+/* Start slider CSS */
+.carousel_caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s ease-in-out 1;
+}
+
+.carousel_trailer span {
+    font-size: 14px;
+    font-weight: 700;
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    border: 2px solid white;
+    text-align: center;
+    line-height: 41px;
+    color: white;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.carousel_trailer button {
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 1999px;
+    outline: none;
+}
+
+.slider .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+/* End slider CSS */
+
+/* Start new CSS */
+.new {
+    padding: 50px;
+}
+
+.new_title {
+    font-size: 30px;
+    color: #ec7532;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.new_title:after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+    margin-top: 10px;
+}
+
+.new_item_img {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.new_item_img img {
+    width: 100%;
+}
+
+.new_item_info {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    color: white;
+    text-align: center;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.new_item_img:hover .new_item_info {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.new_item_info i {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    line-height: 75px;
+}
+
+.new_item_info a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    outline: none;
+}
+
+.new_item_detail {
+    text-align: center;
+}
+
+.new_item_detail h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.new_item_detail p {
+    color: #ec7532;
+}
+
+.new_item_overlay {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(251,189,97,1) 0%, rgba(236,117,50,0.38728995015975143) 100%);
+    transform: skewX(30deg);
+    transition: all 0.5s;
+}
+
+.new_item_img:hover .new_item_overlay {
+    width: 500px;
+}
+/* End new CSS */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
